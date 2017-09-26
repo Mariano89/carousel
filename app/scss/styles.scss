@@ -1,0 +1,47 @@
+@mixin centerCenter {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  position: relative;
+}
+
+.hero {
+  width: 90vw;
+  height: 50vh;
+  margin: 0 auto;
+  border: 1px solid black;
+  position: relative;
+}
+
+.arrow {
+  width: 10vw;
+  height: inherit;
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  span {
+    position: relative;
+    @include centerCenter;
+  }
+}
+
+#leftArrow {
+  border-right: 1px solid black;
+  left: 0;
+}
+
+#rightArrow {
+  border-left: 1px solid black;
+  right: 0;
+}
+
+.title {
+  @include centerCenter;
+  position: absolute;
+}
+
